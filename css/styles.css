@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    color: #fff;
+    position: relative;
+    
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+    padding: 1px 30px;
+    position: relative;
+    top: 20px;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.club-logo {
+    height: 80px;
+    width: auto;
+    position: relative;
+}
+
+.nav-left a, .nav-right a {
+    color: #fff;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    background-color: #555;
+}
+
+.dropdown .dropbtn {
+  
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width:80%;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    text-align: center;
+}
+
+.plantilla-btn{
+    font-size:20px;
+    text-decoration:none;
+    border:1px solid rgb(0, 0, 0);
+    border-radius:5px;
+    padding:5px;
+    background-color: white;
+}
+
+.hero-section {
+    background-image: url('./images/portada.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-size: 4rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    background: linear-gradient(to right, red, black); /* Degradado de rojo a negro */
+    -webkit-background-clip: text; /* Clipa el fondo al texto */
+    -webkit-text-fill-color: transparent; /* Hace el relleno del texto transparente para mostrar el degradado */
+    margin-bottom:15px;
+}
+
+.hero-content p {
+    color: black; /* Color del texto negro */
+    margin: 10px 0; /* Separación entre párrafos */
+    font-size:20px; 
+}
+
+.mapa-ubicacion-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.ubicacion-texto {
+    flex: 1;
+    max-width: 500px;
+}
+
+.ubicacion-texto h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.ubicacion-texto p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.mapa {
+    flex: 1;
+    max-width: 600px;
+}
+
+/* Estilos para enlaces del nav */
+.nav-left{
+    font-size: 20px;
+}
+.nav-right{
+    font-size:12px;
+}
+
+.nav-right a {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: color 0.3s ease;
+    font-size:13px;
+}
+
+.nav-right a:hover,
+.nav-right a:active {
+    color: #ffffff; /* Cambiar el color al pasar el ratón */
+    font-weight: bold;
+    
+   
+    
+  
+ 
+}
+
+.nav-right a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff0000; /* Color de la línea */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-right a:hover::after,
+.nav-right a:active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.filters {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.card {
+    width: 240px;
+    height: 360px;
+    perspective: 1000px;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    padding: 10px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.card-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-info h3 {
+    margin: 5px 0;
+}
+
+.card-info p {
+    margin: 0;
+}
+
+.card-hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    display: none;
+}
+
+.card:hover .card-hover-text {
+    display: block;
+}
+
+.card-inner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+    width: 100%;
+}
